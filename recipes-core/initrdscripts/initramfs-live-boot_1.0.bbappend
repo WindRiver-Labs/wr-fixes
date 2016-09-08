@@ -7,7 +7,7 @@
 PR = "r500"
 
 do_install_append () {
-	if [ "x${ENABLE_LIVE_UNIONFS}" == "x1" ]; then
+	if [ "x${ENABLE_LIVE_UNIONFS}" = "x1" ]; then
 		sed -i 's/UNIONFS="no"/UNIONFS="yes"/g' ${D}/init
 	fi
 }

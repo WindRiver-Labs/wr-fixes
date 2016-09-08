@@ -14,7 +14,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/lsbtest:"
 # will be downloaded by LSB_Test.sh
 
 do_install_append() {
-    if [ "${TARGET_ARCH}" == "powerpc64" ];then                                                
+    if [ "${TARGET_ARCH}" = "powerpc64" ];then
         if [ "${PN}" != "${BPN}" ];then
             sed -i -e 's/lsbarch/ppc64/g' -e 's/targetarch/ppc64/g' ${D}/opt/lsb-test/packages_list
             sed -i -e 's/targetarch/PPC64/g' ${D}/opt/lsb-test/session
