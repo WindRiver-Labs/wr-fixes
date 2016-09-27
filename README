@@ -7,7 +7,8 @@ This layer provides the fixes to other components of the system
 
 Dependencies
 ------------
-This layer depends on the version of oe-core supplied with Wind River Linux.
+This layer depends on the version of openembedded-core supplied with Wind
+River Linux.
 
 This layer also enhances a few items from other Wind River Linux layers. If you
 choose not to use the other layers, you may need to add the following to your
@@ -28,13 +29,12 @@ information on submitting changes.
 
 Building the wr-fixes layer
 -----------------------------------
-This layer should be added to the bblayers.conf file.  This is done
-automatically when using the Wind River configure wrapper.
+This layer should be added to the bblayers.conf file.
 
 
 License
 -------
-Copyright (C) 2013 Wind River Systems, Inc.
+Copyright (C) 2013-2016 Wind River Systems, Inc.
 
 Source code included in the tree for individual recipes is under the LICENSE
 stated in the associated recipe (.bb file) unless otherwise stated.
