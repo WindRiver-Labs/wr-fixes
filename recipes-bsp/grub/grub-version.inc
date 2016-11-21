@@ -1,16 +1,6 @@
 python () {
     grub_flavor = 'grub'
 
-    #
-    # Use an older version of grub if GPLv3 is blacklisted.
-    # We need to specify grub's version here because we have to identify
-    # the correct multilib flavor of grub in packagegroup-wr-boot's RDEPENDS.
-    # Grub went to GPLv3 in version 1.96, but our legacy version is 0.97.
-    #
-    if not d.getVar('PREFERRED_VERSION_grub', False) and \
-      bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPLv3', True, False, d):
-        d.setVar('PREFERRED_VERSION_grub', '0.97')
-
     if d.getVar('TARGET_ARCH', True).startswith('x86_64'):
         #
         # Choose the correct multilib for grub.
