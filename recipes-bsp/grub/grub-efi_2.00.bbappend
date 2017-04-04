@@ -8,7 +8,6 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/grub-efi:"
 FILESEXTRAPATHS_prepend_class-native := "${THISDIR}/grub-efi-native:"
 
 SRC_URI += " \
-    file://Work-around-the-failure-of-ExitBootServices.patch \
     file://0001-mmap.c-Workaround-for-grub_mmap_iterate.patch \
 "
 
